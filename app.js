@@ -106,7 +106,7 @@ function createOpenGallery (mainphoto) {
   var newDiv = document.createElement("div");
   var galleryCard = document.createElement("div");
   var imageDiv = document.createElement("div");
-  var button = document.createElement("div");
+  var button = document.createElement("a");
   var description = document.createElement("div");
   var itemInfo = document.createElement("div");
   var itemTools = document.createElement("div");
