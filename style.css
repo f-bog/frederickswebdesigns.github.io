@@ -273,9 +273,7 @@ h2 {
   cursor: pointer; 
   transition: .2s linear;
 }
-#close:hover {
-  opacity: 0.4;
-}
+
 #galleryCard {
   width: 90%;
   height: 90%;
