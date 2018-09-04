@@ -134,7 +134,7 @@ function createOpenGallery (mainphoto) {
   document.body.appendChild(newDiv);
   document.getElementById('close').setAttribute("href", "#portfolio");
   //Delete new element
-  var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   (newDiv).addEventListener(touchEvent, function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
