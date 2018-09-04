@@ -106,7 +106,7 @@ function createOpenGallery (mainphoto) {
   var newDiv = document.createElement("div");
   var galleryCard = document.createElement("div");
   var imageDiv = document.createElement("div");
-  var button = document.createElement("a");
+  var button = document.createElement("div");
   var description = document.createElement("div");
   var itemInfo = document.createElement("div");
   var itemTools = document.createElement("div");
@@ -132,7 +132,6 @@ function createOpenGallery (mainphoto) {
   newDiv.appendChild(galleryCard);
   imageDiv.appendChild(button);
   document.body.appendChild(newDiv);
-  document.getElementById('close').setAttribute("href", "#portfolio");
   //Delete new element
   let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   (newDiv).addEventListener(touchEvent, function(e) {
