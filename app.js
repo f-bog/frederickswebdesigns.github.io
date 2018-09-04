@@ -111,6 +111,7 @@ function createOpenGallery (mainphoto) {
   var itemInfo = document.createElement("div");
   var itemTools = document.createElement("div");
   // adding content to elements
+  
   button.innerHTML = '<i class="fal fa-window-close"></i>';
   
   //Element id's
@@ -119,6 +120,7 @@ function createOpenGallery (mainphoto) {
   itemInfo.id = "itemInfo";
   description.id = "description";
   button.id = "close";
+ 
   newDiv.id = "open-gallery";
   imageDiv.id = "open-gallery-image";
   //appending divs together
@@ -130,6 +132,7 @@ function createOpenGallery (mainphoto) {
   newDiv.appendChild(galleryCard);
   imageDiv.appendChild(button);
   document.body.appendChild(newDiv);
+  document.getElementById('close').setAttribute("href", "#portfolio");
   //Delete new element
   (newDiv).addEventListener("click", function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
