@@ -136,7 +136,7 @@ function createOpenGallery (mainphoto) {
   //Delete new element
   (newDiv).addEventListener("click", function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
-    document.body.removeChild(newDiv);
+    newDiv.remove();
   } return
   });
 }
