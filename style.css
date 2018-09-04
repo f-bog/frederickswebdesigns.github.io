@@ -297,7 +297,9 @@ h2 {
   margin: 0 auto;
   padding: 20px;
 }
-
+.fa-window-close {
+  pointer-events: none;
+}
 #itemInfo {
   font-size: 1em;
   max-width: 150px;
