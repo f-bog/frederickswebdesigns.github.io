@@ -271,7 +271,6 @@ h2 {
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
   cursor: pointer; 
-  transition: .2s linear;
 }
 
 #galleryCard {
@@ -298,9 +297,7 @@ h2 {
   margin: 0 auto;
   padding: 20px;
 }
-.fa-window-close {
-  pointer-events: none;
-}
+
 #itemInfo {
   font-size: 1em;
   max-width: 150px;
