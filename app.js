@@ -34,25 +34,6 @@ addEventListenerList(navSpan, "mouseleave", function(){
     this.className = this.className.replace("animated rubberBand", "");
 });
 
-
-
-// for (var i = 0; i < intros.length; i++) {
-//   var color = Math.floor(Math.random() * colors.length);
-//   intros[i].style.color = colors[color];
-//   intros[i].style.transition = "all 0.9s";
-// }
-
-// function doSetTimeOut (i) {
-//   setTimeout(function() {
-//     var color = Math.floor(Math.random() * colors.length);
-//     intros[i].style.color = colors[color]
-//   }, 1000);
-// }
-// for (var i = 0; i < intros.length; i++) {
-  
-//   doSetTimeOut(i);
-// }
-
 var index = 0;
 
 function myLoop() {
