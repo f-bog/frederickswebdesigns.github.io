@@ -101,7 +101,7 @@ function createOpenGallery (mainphoto) {
   var itemInfo = document.createElement("div");
   var itemTools = document.createElement("div");
   // adding font awesome for close button
-  closeButton.innerHTML = '<i class="fal fa-window-close"></i>';
+  closeButton.innerHTML = 'x';
   
   //Element id's
   galleryCard.id = "galleryCard";
@@ -119,11 +119,10 @@ function createOpenGallery (mainphoto) {
   galleryCard.appendChild(imageDiv);
   galleryCard.appendChild(description);
   newDiv.appendChild(galleryCard);
-  galleryCard.appendChild(closeButton);
+  imageDiv.appendChild(closeButton);
   document.body.appendChild(newDiv);
   //remove open gallery
-  let touchEvent = 'ontouchstart' in document ? 'touchstart' : 'click';
-  (newDiv).addEventListener(touchEvent, function(e) {
+  (newDiv).addEventListener('click', function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
     } return
