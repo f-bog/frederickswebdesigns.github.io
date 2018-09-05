@@ -1,41 +1,39 @@
-// color changer for text spans
-// var colors = ["#00d4ff","#eeff00","#ff006a","#ff9000","#d400ff","#00ff50","#6e00ff","#12a85d","#acc479","#00ffb2","#832aba","#b2294d"];
+// Colours for the website
 var colors = ["#42f4a4","#41c1f4","#ff4271","#f2ca65"];
-
+// words grabs all spans from the dom 
 var words = document.getElementsByTagName("span");
+// intros grabs the spans on home page
 var intros = document.querySelectorAll('#home span');
+// navspan grabs just nav items
 var navSpan = document.querySelectorAll("#nav-items span");
+// Grabs the portfolio text divs
 document.querySelectorAll(".text");
+// Function declaration that adds an event listener to a list of items
 function addEventListenerList (list, event, fn) {
   for (let i = 0; i < list.length; i++) {
     list[i].addEventListener(event, fn, false);
   }
 }
 
-
+// calling addEventListenerList on words
 addEventListenerList(words, "mouseenter", function(){
   var color = Math.floor(Math.random() * colors.length);
   this.style.color = colors[color];
   this.style.transition = "all 0.3s";
-  // this.addEventListener("mouseleave", function() {
-  //   this.className = this.className.replace("animated rubberBand", "");
-  // });
 });
-// addEventListenerList(words, "mouseleave", function(){
-//     this.className = this.className.replace("animated rubberBand", "");
-// });
+// calling addEventListenerList on navSpan
 addEventListenerList(navSpan, "mouseenter", function(){
   var color = Math.floor(Math.random() * colors.length);
   this.style.color = colors[color];
   this.style.transition = "all 0.3s";
   this.className = "animated rubberBand";
 });
+// calling addEventListenerList on navSpan to remove rubberBand effect on leave
 addEventListenerList(navSpan, "mouseleave", function(){
     this.className = this.className.replace("animated rubberBand", "");
 });
-
+// iterate through each intro adding animation and colour effects
 var index = 0;
-
 function myLoop() {
   var color = Math.floor(Math.random() * colors.length);
   setTimeout(function () {
@@ -50,18 +48,9 @@ function myLoop() {
     }
   },30);
 }
-
-
-
 myLoop();
 
-
-
-
-
-
-// lightbox creation
-
+// data for portfolio.
 var portfolioItems = [
   {
     name: "Manila Finds",
@@ -98,28 +87,28 @@ var portfolioItems = [
     tools: "<ul><li>HTML5</li><li>CSS3</li><li>PHP</li><li>JavaScript</li><li>WordPress</li><li>Genesis Framework</li></ul>",
     link: "#",
     info: "More Information Coming Soon!<br><br><i>-Custom WordPress Child Theme and Plugin Installations and Setup, Responsive Web Design.</i>",
-}
+  }
 ]
-
+// creating a function to generate the gallery card
 function createOpenGallery (mainphoto) {
+  // divs for gallery cards 
   var clonephoto = mainphoto.cloneNode();
   var newDiv = document.createElement("div");
   var galleryCard = document.createElement("div");
   var imageDiv = document.createElement("div");
-  var button = document.createElement("div");
+  var closeButton = document.createElement("div");
   var description = document.createElement("div");
   var itemInfo = document.createElement("div");
   var itemTools = document.createElement("div");
-  // adding content to elements
-  
-  button.innerHTML = '<i class="fal fa-window-close"></i>';
+  // adding font awesome for close button
+  closeButton.innerHTML = '<i class="fal fa-window-close"></i>';
   
   //Element id's
   galleryCard.id = "galleryCard";
   itemTools.id = "itemTools";
   itemInfo.id = "itemInfo";
   description.id = "description";
-  button.id = "close";
+  closeButton.id = "close";
  
   newDiv.id = "open-gallery";
   imageDiv.id = "open-gallery-image";
@@ -130,9 +119,9 @@ function createOpenGallery (mainphoto) {
   galleryCard.appendChild(imageDiv);
   galleryCard.appendChild(description);
   newDiv.appendChild(galleryCard);
-  imageDiv.appendChild(button);
+  imageDiv.appendChild(closeButton);
   document.body.appendChild(newDiv);
-  //Delete new element
+  //remove open gallery
   let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
   (newDiv).addEventListener(touchEvent, function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
