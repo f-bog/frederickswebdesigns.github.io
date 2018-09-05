@@ -298,7 +298,7 @@ h2 {
   padding: 20px;
 }
 .fa-window-close {
-  cursor: pointer;
+  pointer-events: none;
 }
 #itemInfo {
   font-size: 1em;
