@@ -127,7 +127,7 @@ function createOpenGallery (mainphoto) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
   } return
-  });
+  }, false);
 }
 
 function getDescription(altvalue) {
