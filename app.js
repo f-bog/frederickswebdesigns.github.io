@@ -119,11 +119,11 @@ function createOpenGallery (mainphoto) {
   galleryCard.appendChild(imageDiv);
   galleryCard.appendChild(description);
   newDiv.appendChild(galleryCard);
-  imageDiv.appendChild(closeButton);
+  galleryCard.appendChild(closeButton);
   document.body.appendChild(newDiv);
   //remove open gallery
-  // let touchEvent = 'ontouchstart' in document ? 'touchstart' : 'click';
-  (newDiv).addEventListener('touchstart', function(e) {
+  let touchEvent = 'ontouchstart' in document ? 'touchstart' : 'click';
+  (newDiv).addEventListener(touchEvent, function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
     } return
