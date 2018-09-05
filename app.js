@@ -121,13 +121,17 @@ function createOpenGallery (mainphoto) {
   newDiv.appendChild(galleryCard);
   imageDiv.appendChild(closeButton);
   document.body.appendChild(newDiv);
-  //remove open gallery
+  // document.getElementById('close').onclick = document.getElementById('open-gallery').remove();
+  // document.getElementById('close').onclick = newDiv.remove();
+  // remove open gallery
   (newDiv).addEventListener('click', function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
-    } return
+    } 
   });
+ 
 }
+
 
 function getDescription(altvalue) {
   for (let i = 0; i < portfolioItems.length; i++) {
@@ -150,4 +154,5 @@ addEventListenerList(projects, "click", function (e) {
   document.querySelector("#open-gallery").style.display = "block";
   document.querySelector("#open-gallery").className = "animated fadeIn";
 });
+
 
