@@ -122,12 +122,12 @@ function createOpenGallery (mainphoto) {
   imageDiv.appendChild(closeButton);
   document.body.appendChild(newDiv);
   //remove open gallery
-  let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  let touchEvent = 'ontouchstart' in document ? 'touchstart' : 'click';
   (newDiv).addEventListener(touchEvent, function(e) {
     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
     newDiv.remove();
-  } return
-  }, true);
+    } return
+  });
 }
 
 function getDescription(altvalue) {
