@@ -22,6 +22,11 @@ addEventListenerList(words, "mouseenter", function(){
   this.style.color = colors[color];
   this.style.transition = "all 0.3s";
 });
+addEventListenerList(words, "click", function(){
+  var color = Math.floor(Math.random() * colors.length);
+  this.style.color = colors[color];
+  this.style.transition = "all 0.3s";
+});
 // calling addEventListenerList on navSpan
 addEventListenerList(navSpan, "mouseenter", function(){
   var color = Math.floor(Math.random() * colors.length);
