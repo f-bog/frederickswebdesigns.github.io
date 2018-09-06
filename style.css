@@ -263,10 +263,9 @@ h2 {
   z-index: 1500;
 }
 .open-gallery-card {
-
   padding-bottom: 10px;
   width: 100%;
-  margin: 75px auto;
+  margin: 150px auto;
 }
 .open-gallery-card img {
   margin: 0 auto;
@@ -291,17 +290,19 @@ h2 {
   font-size: 50px;
   color: white;
   position: absolute;
+  top: 100px;
   right: 10px;
   cursor: pointer;
 }
 #close-open-gallery:hover {
   opacity: 0.5;
 }
-.gallery-link {
+#gallery-link {
+  color: white;
   padding: 10px;
   cursor: pointer;
 }
-.gallery-link:hover {
+#gallery-link:hover {
   opacity: 0.5;
 }
 #description {
@@ -494,8 +495,11 @@ body,
   } */
   .open-gallery-card {
     width: 60%;
+    margin-top: 60px;
   }
-
+  #close-open-gallery {
+    top: 0;
+  }
   #biglogo {
     height: 447px;
   }
