@@ -77,7 +77,7 @@ var portfolioItems = [
   {
     name: "Pool And Spa Repairs Adelaide",
     link: "http://spa-repairs.com.au/",
-    info: "Operating out of Adelaide, South Australia. Pool And Spa Repairs Adelaide came to me asking for a website with blogging capabilities. I developed their theme from scratch using all of the mentioned tools and technologies, while also reading through the WordPress Codex.",
+    info: "Operating out of Adelaide, South Australia. Pool And Spa Repairs Adelaide came to me asking for a website with blogging capabilities. I developed their theme from scratch.",
   },
   {
     name: "XenoClouds",
