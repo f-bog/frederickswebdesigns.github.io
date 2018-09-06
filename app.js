@@ -95,6 +95,7 @@ var portfolioItems = [
         document.getElementById("item-name").innerHTML = portfolioItems[i].name;
         document.getElementById("description").innerHTML = portfolioItems[i].info;
         if (portfolioItems[i].link !== "#") {
+          document.getElementById("gallery-link").style.display = "block";
           document.getElementById("gallery-link").setAttribute('target', '_blank');
           document.getElementById("gallery-link").setAttribute('href', portfolioItems[i].link);
         } else {
