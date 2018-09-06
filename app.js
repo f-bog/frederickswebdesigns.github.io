@@ -52,6 +52,7 @@ function myLoop() {
 myLoop();
 
 // data for portfolio.
+window.onload = function() {
 var portfolioItems = [
   {
     name: "Manila Finds",
@@ -86,7 +87,7 @@ var portfolioItems = [
 
   }
 ]
-window.onload = function() {
+
   function getDescription(altvalue, theImage) {
     document.querySelector(".open-gallery-image").src = theImage;
     for (let i = 0; i < portfolioItems.length; i++) {
