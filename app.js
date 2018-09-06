@@ -93,7 +93,7 @@ window.onload = function() {
       if (portfolioItems[i].name === altvalue) {
         document.getElementById("item-name").innerHTML = portfolioItems[i].name;
         document.getElementById("description").innerHTML = portfolioItems[i].info;
-        if (portfolioItems[i].link != "#") {
+        if (portfolioItems[i].link !== "#") {
           document.getElementById("gallery-link").setAttribute('target', '_blank');
           document.getElementById("gallery-link").setAttribute('href', portfolioItems[i].link);
         } else {
