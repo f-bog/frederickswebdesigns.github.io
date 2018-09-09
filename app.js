@@ -1,12 +1,12 @@
 
 // Colours for the website
-var colors = ["#42f4a4","#41c1f4","#ff4271","#f2ca65"];
+const colors = ["#42f4a4","#41c1f4","#ff4271","#f2ca65"];
 // words grabs all spans from the dom 
-var words = document.getElementsByTagName("span");
+const words = document.getElementsByTagName("span");
 // intros grabs the spans on home page
-var intros = document.querySelectorAll('#home span');
+const intros = document.querySelectorAll('#home span');
 // navspan grabs just nav items
-var navSpan = document.querySelectorAll("#nav-items span");
+const navSpan = document.querySelectorAll("#nav-items span");
 // Grabs the portfolio text divs
 document.querySelectorAll(".text");
 // Function declaration that adds an event listener to a list of items
@@ -39,7 +39,7 @@ addEventListenerList(navSpan, "mouseleave", function(){
     this.className = this.className.replace("animated rubberBand", "");
 });
 // iterate through each intro adding animation and colour effects
-var index = 0;
+let index = 0;
 function myLoop() {
   var color = Math.floor(Math.random() * colors.length);
   setTimeout(function () {
@@ -58,7 +58,7 @@ myLoop();
 
 // data for portfolio.
 window.onload = function() {
-var portfolioItems = [
+const portfolioItems = [
   {
     name: "Manila Finds",
     link: "http://manilafinds.com.au/",
@@ -110,11 +110,10 @@ var portfolioItems = [
     }
   }
 
-  var projects = document.querySelectorAll(".project");
+const projects = document.querySelectorAll(".project");
   addEventListenerList(projects, "click", function (e) {
-    var theImage = this.getElementsByTagName("img").item(e).src;
-    var altvalue = this.getElementsByTagName("img").item(e).alt;
-    console.log(document.getElementById("description"));
+    const theImage = this.getElementsByTagName("img").item(e).src;
+    const altvalue = this.getElementsByTagName("img").item(e).alt;
     getDescription(altvalue, theImage)
     document.getElementById("open-gallery").style.display = "block";
     document.getElementById("open-gallery").className = "animated fadeIn";
@@ -122,82 +121,4 @@ var portfolioItems = [
   document.getElementById("close-open-gallery").addEventListener("click", function(){
     document.getElementById("open-gallery").style.display = "none";
   });
-// creating a function to generate the gallery card
-//   // remove open gallery
-//   (newDiv).addEventListener('click', function(e) {
-//     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
-//     newDiv.remove();
-//     } 
-//   });
- 
-// }
-
-
-
-// // creating a function to generate the gallery card
-// function createOpenGallery (mainphoto) {
-//   // divs for gallery cards 
-//   var clonephoto = mainphoto.cloneNode();
-//   var newDiv = document.createElement("div");
-//   var galleryCard = document.createElement("div");
-//   var imageDiv = document.createElement("div");
-//   var closeButton = document.createElement("a");
-//   var description = document.createElement("div");
-//   var itemInfo = document.createElement("div");
-//   var itemTools = document.createElement("div");
-//   // adding font awesome for close button
-//   closeButton.innerHTML = 'x';
-  
-//   //Element id's
-//   galleryCard.id = "galleryCard";
-//   itemTools.id = "itemTools";
-//   itemInfo.id = "itemInfo";
-//   description.id = "description";
-//   closeButton.id = "close";
- 
-//   newDiv.id = "open-gallery";
-//   imageDiv.id = "open-gallery-image";
-//   //appending divs together
-//   description.appendChild(itemInfo);
-//   description.appendChild(itemTools);
-//   imageDiv.appendChild(clonephoto);
-//   galleryCard.appendChild(imageDiv);
-//   galleryCard.appendChild(description);
-//   newDiv.appendChild(galleryCard);
-//   imageDiv.appendChild(closeButton);
-//   document.body.appendChild(newDiv);
-//   // document.getElementById('close').onclick = document.getElementById('open-gallery').remove();
-//   // document.getElementById('close').onclick = newDiv.remove();
-//   // remove open gallery
-//   (newDiv).addEventListener('click', function(e) {
-//     if(e.path[0] === document.getElementById('open-gallery') || e.path[0] === document.getElementById('close')) {
-//     newDiv.remove();
-//     } 
-//   });
- 
-// }
-
-
-// function getDescription(altvalue) {
-//   for (let i = 0; i < portfolioItems.length; i++) {
-//     if (portfolioItems[i].name === altvalue) {
-//       itemInfo.innerHTML = "<h4>" + portfolioItems[i].name + "</h4>" + portfolioItems[i].info;
-//       itemTools.innerHTML = "<h4>Technologies</h4>" + portfolioItems[i].tools;
-//       itemInfo.innerHTML += '<a class="rainbow" href="' + portfolioItems[i].link + '" target="_blank"><i class="link fal fa-external-link"></i></a>';
-//     }
-//   }
-// }
-
-
-
-// var projects = document.querySelectorAll(".project");
-// addEventListenerList(projects, "click", function (e) {
-//   var mainphoto = this.getElementsByTagName("img").item(e);
-//   var altvalue = this.getElementsByTagName("img").item(e).alt;
-//   createOpenGallery(mainphoto);
-//   getDescription(altvalue);
-//   document.querySelector("#open-gallery").style.display = "block";
-//   document.querySelector("#open-gallery").className = "animated fadeIn";
-// });
-
 }
