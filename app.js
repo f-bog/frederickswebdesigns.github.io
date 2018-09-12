@@ -76,7 +76,7 @@ const portfolioItems = [
   },
   {
     name: "Pool And Spa Repairs Adelaide",
-    link: "http://spa-repairs.com.au/",
+    link: "https://spa-repairs.com.au/",
     info: "Operating out of Adelaide, South Australia. Pool And Spa Repairs Adelaide came to me asking for a website with blogging capabilities. I developed their theme from scratch.",
   },
   {
@@ -87,8 +87,8 @@ const portfolioItems = [
   },
   {
     name: "Black Diamond Electrical Services S.A.",
-    link: "#",
-    info: "More Information Coming Soon!",
+    link: "https://blackdiamondes.com",
+    info: "Black Diamond Electrical Services S.A. is a South Australian electrician business that takes their customers needs above all else. Providing clients with the best service at a great price. I developed their website with their business model in mind, using the genesis framework I was able to provide them with an excellent website.",
 
   }
 ]
