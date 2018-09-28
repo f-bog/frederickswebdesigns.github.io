@@ -4,7 +4,7 @@ const colors = ["#42f4a4","#41c1f4","#ff4271","#f2ca65"];
 // words grabs all spans from the dom 
 const words = document.getElementsByTagName("span");
 // intros grabs the spans on home page
-const intros = document.querySelectorAll('#home span');
+const intros = document.querySelectorAll('#welcome-section span');
 // navspan grabs just nav items
 const navSpan = document.querySelectorAll("#nav-items span");
 // Grabs the portfolio text divs
@@ -110,7 +110,7 @@ const portfolioItems = [
     }
   }
 
-const projects = document.querySelectorAll(".project");
+const projects = document.querySelectorAll(".project-tile");
   addEventListenerList(projects, "click", function (e) {
     const theImage = this.getElementsByTagName("img").item(e).src;
     const altvalue = this.getElementsByTagName("img").item(e).alt;

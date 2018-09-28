@@ -13,6 +13,9 @@ body {
 main {
   margin-top: 70px;
 }
+h1 {
+  display: none;
+}
 h2 {
   font-size: 50px;
   font-weight: 900;
@@ -111,10 +114,10 @@ span {
 }
 
 
-#home {
-  margin: 150px auto;
+#welcome-section {
+  margin: 150px auto 0px auto;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   text-align: center;
 }
 
@@ -123,7 +126,7 @@ span {
 /* intro end */
 
 /* nav start */
-#nav {
+#navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -177,7 +180,7 @@ span {
 
 /* about start */
 #about, 
-#portfolio,
+#projects,
 #contact {
   padding: 30px 0;
   margin: 150px auto;
@@ -216,7 +219,7 @@ span {
 
 
 /* portfolio start */
-#portfolio{
+#projects{
   text-align: center;
   background-color:#191919;
 }
@@ -246,7 +249,7 @@ span {
 .overlay-info a {
   color: white;
 }
-.project {
+.project-tile {
   position: relative;
   padding: 0;
   width: 90%;
@@ -326,7 +329,7 @@ span {
   cursor: pointer;
 }
 
-.project:hover .overlay {
+.project-tile:hover .overlay {
   opacity: 0.9;
 }
 .text {
@@ -365,7 +368,7 @@ body,
 
 /* font colors */
 .box,
-#portfolio h2,
+#projects h2,
 #getquote:hover,
 #contact {
   color: #bababa
@@ -386,7 +389,7 @@ body,
 .lists,
 .box,
 #nav-items,
-#nav  {
+#navbar  {
   display: flex;
 }
 #getquote,
@@ -395,7 +398,7 @@ body,
 }
 
 .box,
-#nav,
+#navbar,
 .gallery {
   -webkit-box-shadow: 0px 3px 17px -1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 3px 17px -1px rgba(0,0,0,0.75);
@@ -423,7 +426,7 @@ body,
     margin-top: 0;
     margin-left: 70px;
   }
-  #nav {
+  #navbar {
     flex-direction: column;
     width: 70px;
     height: 100%;
@@ -431,7 +434,7 @@ body,
     text-align: center;
   }
 
-  #home {
+  #welcome-section {
     margin: 95px auto 120px auto;
   }
 
@@ -513,7 +516,7 @@ body,
   #biglogo {
     height: 447px;
   }
-  .project {
+  .project-tile {
     position: relative;
     padding: 0px;
     width: 45%;
