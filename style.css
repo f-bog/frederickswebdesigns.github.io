@@ -9,6 +9,7 @@ body {
   box-sizing: border-box;
   letter-spacing: 1px;
   height: 100%;
+  width: 100%;
 }
 main {
   margin-top: 70px;
@@ -142,7 +143,7 @@ span {
 
 .nav-item {
   display: block;
-  margin: 25px 20px;
+  margin: 25px 10px;
   color: rgb(131, 128, 128);
   text-decoration: none;
   font-size: 25px;
@@ -332,7 +333,7 @@ span {
 /* portfolio end */
 
 #me {
-  width: 250px;
+  width: 150px;
   border-radius: 50%;
 }
 
@@ -450,7 +451,7 @@ body,
 
   .nav-item {
     font-size: 22px;
-    margin: 15px auto;
+    margin: 10px auto;
   }
   .contact:hover {
     color: #ff9000;
@@ -499,6 +500,9 @@ body,
     margin: 10px auto;
     cursor: pointer;
     height: auto;
+  }
+  #me {
+    width: 250px;
   }
 }
 
